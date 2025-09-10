@@ -14,14 +14,27 @@
     <meta property="og:image" content="ここに表示させたい画像のURLを入れます">
     <meta property="og:site_name" content="Koi-Kukuri">
     <meta name="twitter:card" content="summary_large_image">
+    
+    <!-- ▼▼▼ フォントを読み込みます ▼▼▼ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&display=swap" rel="stylesheet">
 
     <style>
-        /* --- Design --- */
+        /* --- 全体のデザインをリニューアル --- */
+        :root {
+            --main-color: #e55c6e;
+            --accent-color: #feb47b;
+            --bg-color: #fdfcfa;
+            --text-color: #544a45;
+            --card-bg-color: #ffffff;
+        }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            font-family: 'M PLUS Rounded 1c', sans-serif; /* 柔らかいフォントに変更 */
             line-height: 1.8;
-            color: #333;
-            background-color: #f9f8f6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
             margin: 0;
             padding: 0;
             scroll-behavior: smooth;
@@ -33,27 +46,28 @@
             text-align: center;
         }
         header {
-            padding: 60px 20px;
-            background-color: #fff;
-            border-radius: 16px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            margin-bottom: 40px;
+            padding: 40px 20px;
+            background-color: var(--card-bg-color);
+            border-radius: 24px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04); /* ふんわりした影に変更 */
+            margin-bottom: 50px;
         }
         .main-visual {
             max-width: 100%;
             height: auto;
-            border-radius: 12px;
+            border-radius: 16px;
             margin-bottom: 40px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
         }
         h1 {
             font-size: 2.5em;
-            color: #e55c6e;
+            color: var(--main-color);
             margin-bottom: 10px;
+            line-height: 1.4;
         }
         .sub-copy {
             font-size: 1.1em;
-            color: #555;
+            color: #777;
             margin-bottom: 30px;
         }
         .cta-button {
@@ -72,55 +86,75 @@
             box-shadow: 0 6px 20px rgba(254, 180, 123, 0.7);
         }
         section {
-            background-color: #fff;
-            padding: 40px 20px;
-            margin-bottom: 40px;
-            border-radius: 16px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            background-color: var(--card-bg-color);
+            padding: 50px 30px;
+            margin-bottom: 50px;
+            border-radius: 24px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
             text-align: left;
         }
         .event-section, .line-section {
             background-color: #fffaf0;
-            border: 2px dashed #feb47b;
+            border: 2px dashed var(--accent-color);
             text-align: center;
         }
         .event-section h3 {
             font-size: 1.8em;
-            color: #e55c6e;
+            color: var(--main-color);
         }
         .event-section .period {
             font-size: 1.2em;
             font-weight: bold;
             margin-bottom: 25px;
-            color: #e55c6e;
+            color: var(--main-color);
         }
-        h2 {
+        h2 { /* 見出しデザインをオシャレに変更 */
             font-size: 2em;
-            border-bottom: 3px solid #feb47b;
-            display: inline-block;
-            padding-bottom: 5px;
-            margin-bottom: 30px;
+            padding-bottom: 15px;
+            margin-bottom: 40px;
             text-align: center;
             width: 100%;
+            position: relative;
+            border-bottom: none;
         }
+        h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: var(--accent-color);
+            border-radius: 2px;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        /* ▼▼▼「3つの特徴」のバランスを修正 ▼▼▼ */
         .features {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            gap: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* 均等に並ぶように修正 */
+            gap: 25px;
         }
         .feature-item {
-            flex-basis: 100%;
-            background: #f9f9f9;
-            padding: 20px;
-            border-radius: 12px;
-            border-left: 5px solid #e55c6e;
+            background: #fafafa;
+            padding: 25px;
+            border-radius: 16px;
+            border-bottom: 4px solid var(--accent-color);
         }
         .feature-item h3 {
             font-size: 1.5em;
             margin-top: 0;
-            color: #e55c6e;
+            color: var(--main-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
+        .feature-item h3 svg { /* アイコンのスタイル */
+            width: 28px;
+            height: 28px;
+            flex-shrink: 0;
+        }
+        /* ▲▲▲「3つの特徴」のバランスを修正 ▲▲▲ */
         .notes-list, .concept-target {
             list-style: none;
             padding-left: 0;
@@ -131,27 +165,23 @@
             margin-bottom: 10px;
         }
         .message-box {
-            background: #fefefe;
+            background: var(--bg-color);
             border: 1px solid #eee;
             padding: 20px;
             border-radius: 12px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            box-shadow: inset 0 2px 8px rgba(0,0,0,0.04);
         }
         footer {
-            padding: 20px;
+            padding: 40px 20px 20px;
             font-size: 0.9em;
-            color: #888;
+            color: #aaa;
             text-align: center;
-        }
-        @media (min-width: 600px) {
-            .feature-item {
-                flex-basis: 28%;
-            }
         }
         @media (max-width: 600px) {
             h1 { font-size: 2em; }
             h2 { font-size: 1.5em; }
             .event-section h3 { font-size: 1.5em; }
+            section { padding: 40px 20px; }
         }
     </style>
 </head>
@@ -197,16 +227,17 @@
                 <h2>Koi-Kukuriの3つの特徴</h2>
                 <div class="features">
                     <div class="feature-item">
-                        <h3>【安心】顔出し不要でプライバシーも守れる</h3>
-                        <p>イベントではアバターを使用するため、顔出しなしで安心です。さらに、会場ではアバターが近くにいる人とだけ会話が可能。周りを気にせず「ちょっと2人で話したいな」が、とても自然にできるのも魅力です。</p>
+                        <!-- ▼▼▼ アイコンを追加しました ▼▼▼ -->
+                        <h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>【安心】</h3>
+                        <p>顔出し不要のアバターで参加。会場では近くの人とだけ話せるので、プライバシーを守りながら「2人だけで話したい」が自然にできます。</p>
                     </div>
                     <div class="feature-item">
-                        <h3>【自然】がんばらずに、人柄がわかる</h3>
-                        <p>「何を話せばいいか…」という方も大丈夫。謎解きに夢中になっているうちに、いつの間にか自然と話せるはずです。問題解決へのアプローチや他者への気遣いなど、「素」の姿が自然に表れます。</p>
+                        <h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 18a5 5 0 0 0-10 0"></path><path d="M12 2a5 5 0 0 0-5 5v3"></path><path d="M7 2a5 5 0 0 1 5 5v3"></path></svg>【自然】</h3>
+                        <p>謎解きに夢中になるうち、自然と会話が生まれます。問題解決への姿勢や他者への気遣いなど、「素」の姿が自然と見えてきます。</p>
                     </div>
                     <div class="feature-item">
-                        <h3>【手軽】移動時間ゼロ、全国から参加OK</h3>
-                        <p>ご自宅から気軽に参加できるため、交通費や移動時間の負担がありません。全国の参加者と出会うチャンスがあります。</p>
+                        <h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 9v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V9"></path><path d="M9 22V12h6v10"></path><path d="M2 10.6L12 2l10 8.6"></path></svg>【手軽】</h3>
+                        <p>ご自宅から気軽に参加できるため、交通費や移動時間はゼロ。全国の参加者と出会うチャンスが、あなたのすぐそばにあります。</p>
                     </div>
                 </div>
             </section>
@@ -230,7 +261,6 @@
                 </div>
             </section>
             
-            <!-- ▼▼▼ LINE友だち追加セクションを追加しました ▼▼▼ -->
             <section class="line-section">
                 <h2>最新情報をLINEでお届け</h2>
                 <p>
@@ -239,7 +269,6 @@
                 </p>
                 <a href="https://lin.ee/1uZADWk"><img src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png" alt="友だち追加" height="36" border="0"></a>
             </section>
-            <!-- ▲▲▲ LINE友だち追加セクションを追加しました ▲▲▲ -->
 
         </main>
 
