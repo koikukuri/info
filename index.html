@@ -131,10 +131,9 @@
             left: 50%;
             transform: translateX(-50%);
         }
-        /* ▼▼▼「3つの特徴」のバランスを修正 ▼▼▼ */
         .features {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* 均等に並ぶように修正 */
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 25px;
         }
         .feature-item {
@@ -151,12 +150,11 @@
             align-items: center;
             gap: 10px;
         }
-        .feature-item h3 svg { /* アイコンのスタイル */
+        .feature-item h3 svg {
             width: 28px;
             height: 28px;
             flex-shrink: 0;
         }
-        /* ▲▲▲「3つの特徴」のバランスを修正 ▲▲▲ */
         .notes-list, .concept-target {
             list-style: none;
             padding-left: 0;
@@ -173,6 +171,36 @@
             border-radius: 12px;
             box-shadow: inset 0 2px 8px rgba(0,0,0,0.04);
         }
+        /* ▼▼▼「参加者の声」のスタイルを追加 ▼▼▼ */
+        .voices-section {
+            text-align: center;
+        }
+        .voice-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            text-align: left;
+            margin-top: 30px;
+        }
+        .voice-card {
+            background: #fafafa;
+            padding: 20px 20px 20px 25px;
+            border-radius: 16px;
+            border-left: 4px solid var(--accent-color);
+            position: relative;
+        }
+        .voice-card p {
+            margin: 0;
+        }
+        .voice-card::before {
+            content: '💬';
+            position: absolute;
+            top: 10px;
+            left: -10px;
+            font-size: 1.5em;
+            opacity: 0.5;
+        }
+        /* ▲▲▲「参加者の声」のスタイルを追加 ▲▲▲ */
         footer {
             padding: 40px 20px 20px;
             font-size: 0.9em;
@@ -229,7 +257,6 @@
                 <h2>Koi-Kukuriの3つの特徴</h2>
                 <div class="features">
                     <div class="feature-item">
-                        <!-- ▼▼▼ アイコンを追加しました ▼▼▼ -->
                         <h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>【安心】</h3>
                         <p>顔出し不要のアバターで参加。会場では近くの人とだけ話せるので、プライバシーを守りながら「2人だけで話したい」が自然にできます。</p>
                     </div>
@@ -247,12 +274,10 @@
             <section>
                 <h2>参加にあたって</h2>
                 <ul class="notes-list">
-                    <!-- ▼▼▼ ここを修正しました ▼▼▼ -->
                     <li>PCでの参加を推奨しますが、スマートフォンやタブレットからもアクセス可能です。アバターの移動や文字入力に、外付けキーボードがあるとより快適に操作いただけます。</li>
                     <li>顔出しは不要ですが、会話は音声が中心です。快適なコミュニケーションのため、イヤホンやヘッドホンのご用意をおすすめします。</li>
                     <li>謎を解くために、お手元にペンとメモ用紙をご用意いただくことをおすすめします。</li>
                     <li>ネットワーク環境が不安定な場合、イベントを円滑に進められない可能性があります。</li>
-                    <!-- ▲▲▲ ここを修正しました ▲▲▲ -->
                 </ul>
             </section>
             
@@ -265,6 +290,27 @@
                     </p>
                 </div>
             </section>
+
+            <!-- ▼▼▼「参加者の声」のセクションを追加しました ▼▼▼ -->
+            <section class="voices-section">
+                <h2>体験者の声</h2>
+                <p>お試し謎解きルームに参加された方から、嬉しい感想が届いています！</p>
+                <div class="voice-cards">
+                    <div class="voice-card">
+                        <p>とても楽しかったです！</p>
+                    </div>
+                    <div class="voice-card">
+                        <p>「●●だ！」と気づいたときの脳汁がどばどば</p>
+                    </div>
+                    <div class="voice-card">
+                        <p>「●●のヒントを生かすアイデアがおもしろかったです！」</p>
+                    </div>
+                    <div class="voice-card">
+                        <p>ちょうどいい難易度でした</p>
+                    </div>
+                </div>
+            </section>
+            <!-- ▲▲▲「参加者の声」のセクションを追加しました ▲▲▲ -->
             
             <section class="line-section">
                 <h2>最新情報をLINEでお届け</h2>
