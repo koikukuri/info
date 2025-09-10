@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koi-Kukuri | 会話でがんばらない、アバター謎解き婚活</title>
+
+    <!-- SEO & SNS Tags -->
+    <meta name="description" content="もう会話でがんばらない、新しい形の謎解き婚活「Koi-Kukuri」。顔出し不要のアバターでゲームのように楽しみながら、自然とつながる出会いを体験しませんか？現在テストイベント開催中！">
+    <meta property="og:title" content="Koi-Kukuri | 会話でがんばらない、アバター謎解き婚活">
+    <meta property="og:description" content="顔出し不要のアバターでゲームのように楽しみながら、自然とつながる出会いを体験しませんか？">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="ここに公開後のページのURLを入れます">
+    <meta property="og:image" content="ここに表示させたい画像のURLを入れます">
+    <meta property="og:site_name" content="Koi-Kukuri">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <style>
+        /* --- Design --- */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f9f8f6;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        header {
+            padding: 60px 20px;
+            background-color: #fff;
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            margin-bottom: 40px;
+        }
+        .main-visual {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        h1 {
+            font-size: 2.5em;
+            color: #e55c6e;
+            margin-bottom: 10px;
+        }
+        .sub-copy {
+            font-size: 1.1em;
+            color: #555;
+            margin-bottom: 30px;
+        }
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #ff7e5f, #feb47b);
+            color: #fff;
+            padding: 15px 40px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(254, 180, 123, 0.5);
+            transition: all 0.3s ease;
+        }
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(254, 180, 123, 0.7);
+        }
+        section {
+            background-color: #fff;
+            padding: 40px 20px;
+            margin-bottom: 40px;
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            text-align: left;
+        }
+        .event-section, .line-section {
+            background-color: #fffaf0;
+            border: 2px dashed #feb47b;
+            text-align: center;
+        }
+        .event-section h3 {
+            font-size: 1.8em;
+            color: #e55c6e;
+        }
+        .event-section .period {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 25px;
+            color: #e55c6e;
+        }
+        h2 {
+            font-size: 2em;
+            border-bottom: 3px solid #feb47b;
+            display: inline-block;
+            padding-bottom: 5px;
+            margin-bottom: 30px;
+            text-align: center;
+            width: 100%;
+        }
+        .features {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .feature-item {
+            flex-basis: 100%;
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 12px;
+            border-left: 5px solid #e55c6e;
+        }
+        .feature-item h3 {
+            font-size: 1.5em;
+            margin-top: 0;
+            color: #e55c6e;
+        }
+        .notes-list, .concept-target {
+            list-style: none;
+            padding-left: 0;
+        }
+        .notes-list li, .concept-target li {
+            background: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23e55c6e" class="bi bi-check-circle-fill" viewBox="0 0 16 16"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/></svg>') no-repeat 0 8px;
+            padding-left: 25px;
+            margin-bottom: 10px;
+        }
+        .message-box {
+            background: #fefefe;
+            border: 1px solid #eee;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        footer {
+            padding: 20px;
+            font-size: 0.9em;
+            color: #888;
+            text-align: center;
+        }
+        @media (min-width: 600px) {
+            .feature-item {
+                flex-basis: 28%;
+            }
+        }
+        @media (max-width: 600px) {
+            h1 { font-size: 2em; }
+            h2 { font-size: 1.5em; }
+            .event-section h3 { font-size: 1.5em; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <img src="main-visual.png" alt="Koi-Kukuriのイベント風景" class="main-visual">
+            <h1>もう、会話でがんばらない。<br>アバターで始める、謎解き婚活</h1>
+            <p class="sub-copy">顔出しなし／会話ベタOK／ゲーム感覚で自然に話せる</p>
+            <a href="#current-event" class="cta-button">開催中のイベントをチェック！</a>
+        </header>
+
+        <main>
+            <section id="current-event" class="event-section">
+                <h2>開催中のイベント</h2>
+                <h3>24時間いつでも遊べる！無料お試し謎解きルーム</h3>
+                <p class="period">🎉 9月14日までの期間限定公開！ 🎉</p>
+                <p>
+                    「謎解き婚活、気になる...でも、いきなり参加は不安」という方にピッタリ！<br>
+                    24時間、好きなタイミングで参加できて、一人でじっくり謎に挑戦できます。<br>
+                    お試しとはいえ、本番仕様の謎が盛りだくさん。謎解き好きの方も、ぜひ挑戦してみてくださいね。<br>
+                    仮想空間をお散歩するだけでも大歓迎です！
+                </p>
+                <a href="https://app.gather.town/invite?token=zVCnn9EzRvq2xMJk0DFA" class="cta-button" target="_blank" rel="noopener noreferrer">今すぐ無料で体験する！</a>
+            </section>
+
+            <section>
+                <h2>Koi-Kukuriとは？</h2>
+                <p>
+                    従来の婚活パーティーでは、初対面の人と何を話せばいいか困った経験はありませんか？<br>
+                    コイククリなら、謎解きという共通のゴールがあるから、会話に困ることはありません。自然なコミュニケーションから、本当の自分を見せられる出会いを見つけましょう！
+                </p>
+                <p>こんな方にぴったりのサービスです。</p>
+                <ul class="concept-target">
+                    <li>会話が苦手な方、人と出会うことに少し疲れてしまった方</li>
+                    <li>地方に住んでいて出会いの機会が少ない方</li>
+                    <li>初対面で顔を出すことに抵抗がある方</li>
+                </ul>
+            </section>
+            
+            <section>
+                <h2>Koi-Kukuriの3つの特徴</h2>
+                <div class="features">
+                    <div class="feature-item">
+                        <h3>【安心】顔出し不要でプライバシーも守れる</h3>
+                        <p>イベントではアバターを使用するため、顔出しなしで安心です。さらに、会場ではアバターが近くにいる人とだけ会話が可能。周りを気にせず「ちょっと2人で話したいな」が、とても自然にできるのも魅力です。</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>【自然】がんばらずに、人柄がわかる</h3>
+                        <p>「何を話せばいいか…」という方も大丈夫。謎解きに夢中になっているうちに、いつの間にか自然と話せるはずです。問題解決へのアプローチや他者への気遣いなど、「素」の姿が自然に表れます。</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>【手軽】移動時間ゼロ、全国から参加OK</h3>
+                        <p>ご自宅から気軽に参加できるため、交通費や移動時間の負担がありません。全国の参加者と出会うチャンスがあります。</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section>
+                <h2>参加にあたって</h2>
+                <ul class="notes-list">
+                    <li>PCでの参加を推奨しますが、スマートフォンやタブレットからもアクセス可能です。</li>
+                    <li>イベント中のプライバシー保護のため、画面録画やスクリーンショットはご遠慮ください。</li>
+                    <li>ネットワーク環境が不安定な場合、イベントを円滑に進められない可能性があります。</li>
+                </ul>
+            </section>
+            
+            <section>
+                <h2>運営からの一言</h2>
+                <div class="message-box">
+                    <p>
+                        人と出会うことに、少し疲れていませんか？<br>
+                        コイククリは、そんなあなたのために生まれました。「がんばって話さなくても、一緒に謎を解くうちに自然と心が通い合う」そんな心温まる出会いを届けたいと願っています。皆さまのご参加を心よりお待ちしております！
+                    </p>
+                </div>
+            </section>
+            
+            <!-- ▼▼▼ LINE友だち追加セクションを追加しました ▼▼▼ -->
+            <section class="line-section">
+                <h2>最新情報をLINEでお届け</h2>
+                <p>
+                    今後のイベント開催情報や、お得なキャンペーンのお知らせをLINE公式アカウントで配信します。<br>
+                    ぜひ「友だち追加」して、最新情報を受け取ってください！
+                </p>
+                <a href="https://lin.ee/1uZADWk"><img src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png" alt="友だち追加" height="36" border="0"></a>
+            </section>
+            <!-- ▲▲▲ LINE友だち追加セクションを追加しました ▲▲▲ -->
+
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Koi-Kukuri.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
+
